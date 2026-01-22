@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VCE Logistics - Driver Portal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: #ffffff;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        .logo {
+            max-width: 280px;
+            height: auto;
+            margin-bottom: 20px;
+            filter: brightness(1.1);
+        }
+
+        .tagline {
+            font-size: 14px;
+            color: #888;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            width: 100%;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            backdrop-filter: blur(10px);
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 25px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover .card-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .card:nth-child(1) .card-icon {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .card:nth-child(2) .card-icon {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .card:nth-child(3) .card-icon {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .card-title {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+
+        .card-description {
+            font-size: 14px;
+            color: #aaa;
+            line-height: 1.6;
+        }
+
+        .footer {
+            margin-top: 60px;
+            text-align: center;
+            color: #666;
+            font-size: 13px;
+            animation: fadeIn 1s ease 0.5s both;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+
+            .logo {
+                max-width: 220px;
+            }
+
+            .header {
+                margin-bottom: 40px;
+            }
+        }
+
+        /* Icon SVGs */
+        .icon-svg {
+            width: 32px;
+            height: 32px;
+            fill: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="https://img1.wsimg.com/isteam/ip/09d15051-3d17-4a7a-9c5c-0882f1b02ba5/VCElogo_large.png" alt="VCE Logistics" class="logo">
+        <p class="tagline">Driver Portal</p>
+    </div>
+
+    <div class="dashboard">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSffJaygXsNd3Xw0zjpN1v0T8BdrRKG4ulrj9RKzKfDx5PaYsg/viewform?usp=sharing&ouid=101645929471910903969" target="_blank" class="card">
+            <div class="card-icon">
+                <svg class="icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2zm0 15l-5-2.18L7 18V5h10v13z"/>
+                </svg>
+            </div>
+            <h2 class="card-title">Van Inspection</h2>
+            <p class="card-description">Complete your pre-shift vehicle inspection checklist</p>
+        </a>
+
+        <a href="https://script.google.com/macros/s/AKfycbzi6ftNXQYs-Qd7cFqtmLgqnnUPMRgx5oEajiK-H0ggcMiMBAD_7TpI5k_w3-qoFvJ_ag/exec" target="_blank" class="card">
+            <div class="card-icon">
+                <svg class="icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/>
+                </svg>
+            </div>
+            <h2 class="card-title">Gas Card PIN</h2>
+            <p class="card-description">Access your gas card PIN information</p>
+        </a>
+
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSegXyz950gtiOalEf8aXZqPjKB6LYdlzNvbSGRQuHHtpoTFSQ/viewform?usp=sharing&ouid=109174185179127434528" target="_blank" class="card">
+            <div class="card-icon">
+                <svg class="icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
+                </svg>
+            </div>
+            <h2 class="card-title">End of Shift</h2>
+            <p class="card-description">Submit your end of shift report and log details</p>
+        </a>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 VCE Logistics. All rights reserved.</p>
+    </div>
+</body>
+</html>
